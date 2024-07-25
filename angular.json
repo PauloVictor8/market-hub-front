@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "giga-ecommerce-front": {
+    "market-hub": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/giga-ecommerce-front",
+            "outputPath": "dist/market-hub",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -69,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "giga-ecommerce-front:build:production"
+              "buildTarget": "market-hub:build:production"
             },
             "development": {
-              "buildTarget": "giga-ecommerce-front:build:development"
+              "buildTarget": "market-hub:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -100,8 +100,23 @@
             ],
             "scripts": []
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "18c22f05-4051-4c09-a730-956c703ef6f4",
+    "schematicCollections": [
+      "@angular-eslint/schematics"
+    ]
   }
 }
