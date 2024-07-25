@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:giga-ecommerce-front": "node dist/market-hub/server/server.mjs",
-    "lint": "ng lint",
+    "lint": "ng lint --fix",
     "prepare": "husky"
   },
   "private": true,
@@ -37,6 +37,7 @@
     "@types/node": "^18.18.0",
     "angular-eslint": "18.1.0",
     "eslint": "^9.6.0",
+    "eslint-plugin-unused-imports": "^4.0.1",
     "husky": "^9.1.2",
     "jasmine-core": "~5.1.0",
     "karma": "~6.4.0",
